@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Login Page
+{% endblock title %}
+
+{% block content %}
+    <h1>Log in</h1>
+    <form action="/users/login/" 
+    method="post" class="form-with-validation">
+        {% csrf_token %}
+        {{form}}
+        <button class="form-submit">Submit</button>
+    </form>
+{% endblock content %}
